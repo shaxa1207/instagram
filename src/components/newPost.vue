@@ -33,7 +33,7 @@
           <img class="post-img" :src="element.image" alt="" />
           <div class="comments">
             <div class="d-flex align-items-center justify-content-between">
-              <div class="svgs-group d-flex">
+              <div class="svgs-group d-flex align-items-center">
                 <span>
                   <svg
                     width="20"
@@ -113,9 +113,7 @@
                 <h5>sky_study_consulting</h5>
                 <p>Til sertifikatisiz Yevropada ta'lim oling</p>
               </div>
-              <time>
-                <p>4 minutes ago</p>
-              </time>
+              <time>4 minutes ago</time>
             </div>
           </div>
           <section class="comment-post d-flex align-items-center">
@@ -218,35 +216,39 @@ export default {
   }
   .comments {
     background: #fff;
-    padding: 16px;
+    padding: 8px 16px;
     .svgs-group {
-      span {
-        padding: 8px;
-      }
+      gap: 8px;
+      margin: 8px 0;
     }
-    .wrapper-comment{
-      h5{
+    .wrapper-comment {
+      h5 {
         font-weight: 600;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-        padding-left: 5px;
-        margin: 0;
-        margin-left: -5px;
+        margin: 5px 0;
         color: #262626;
         font-family: SF UI Text, sans-serif;
         font-size: 16px;
         line-height: 16px;
         cursor: pointer;
       }
-      h5:hover{
+      h5:hover {
         text-decoration: underline;
       }
-      p{
+      p {
         margin: 0;
         font-size: 14px;
         line-height: 14px;
-
+      }
+      time {
+        margin: 5px 0;
+        color: #8e8e8e;
+        font-size: 11px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        text-transform: uppercase;
       }
     }
   }
@@ -275,6 +277,7 @@ export default {
       outline: none;
       border: 0;
       background-color: #fff;
+      overflow-x: hidden;
     }
     button {
       border: 0;
